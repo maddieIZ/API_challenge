@@ -1,15 +1,15 @@
-
-# Dependencies and Setup
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import requests
 import time
-from scipy.stats import linregress
 import json
-from datetime import date
+from scipy import stats
+from scipy.stats import linregress
 
-def Lin_Reg(x_values, y_values,xlabel,ylabel) :
+def LinearRegression(x_values, y_values,xlabel,ylabel) :
+
+
     (slope, intercept, rvalue, pvalue, stderr) = linregress(x_values, y_values)
     regress_values = x_values * slope + intercept
     line_eq = "y = " + str(round(slope,2)) + "x + " + str(round(intercept,2))
@@ -19,3 +19,4 @@ def Lin_Reg(x_values, y_values,xlabel,ylabel) :
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.show()
+
